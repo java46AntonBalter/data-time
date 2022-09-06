@@ -8,17 +8,17 @@ public class NextFriday13 implements TemporalAdjuster {
 
 	@Override
 	public Temporal adjustInto(Temporal temporal) {
-		LocalDate start = LocalDate.from(temporal);
-		if (start.getDayOfMonth() < 13) {
-			start = start.withDayOfMonth(13);
+		LocalDate evilFriday = LocalDate.from(temporal);
+		if (evilFriday.getDayOfMonth() < 13) {
+			evilFriday = evilFriday.withDayOfMonth(13);
 		} else {
-			start = start.plusMonths(1).withDayOfMonth(13);
+			evilFriday = evilFriday.plusMonths(1).withDayOfMonth(13);
 		}
 
-		while (start.getDayOfWeek() != DayOfWeek.FRIDAY) {
-			start = start.plusMonths(1).withDayOfMonth(13);
+		while (evilFriday.getDayOfWeek() != DayOfWeek.FRIDAY) {
+			evilFriday = evilFriday.plusMonths(1).withDayOfMonth(13);
 		}
-		return start;
+		return evilFriday;
 	}
 
 }
