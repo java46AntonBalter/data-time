@@ -37,7 +37,7 @@ public class WorkingDaysAdjuster implements TemporalAdjuster {
 	@Override
 	public Temporal adjustInto(Temporal temporal) {
 		LocalDate res = LocalDate.from(temporal);
-		if (daysOff.length == 7  && Arrays.equals(daysOff, new int[]{ 1, 2, 3, 4, 5, 6, 7 })) {
+		if (Arrays.equals(daysOff, new int[]{ 1, 2, 3, 4, 5, 6, 7 })) {
 			return res;
 		} else if (daysOff.length == 0) {
 			return res.plusDays(nDays);
