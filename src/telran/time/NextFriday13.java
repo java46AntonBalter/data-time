@@ -18,7 +18,7 @@ public class NextFriday13 implements TemporalAdjuster {
 		while (evilFriday.getDayOfWeek() != DayOfWeek.FRIDAY) {
 			evilFriday = evilFriday.plusMonths(1).withDayOfMonth(13);
 		}
-		return evilFriday;
+		return temporal.with(evilFriday);
 	}
 
 }

@@ -51,7 +51,7 @@ public class WorkingDaysAdjuster implements TemporalAdjuster {
 				i--;
 			}
 		}
-		return res;
+		return temporal.with(temp);
 	}
 
 	private boolean isDayOff(int num) {
