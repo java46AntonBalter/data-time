@@ -104,7 +104,7 @@ public class PrintCalendar {
 			String dayInCaps = dayString.toUpperCase();
 			int res = DayOfWeek.valueOf(dayInCaps).getValue();
 			return res;
-		} catch (IllegalArgumentException e) {
+		} catch (Exception e) {
 			throw new Exception("Please enter a full name of the day of the week in English. Example: Thursday");
 		}
 
