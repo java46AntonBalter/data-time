@@ -37,7 +37,7 @@ public class PrintCalendar {
 		}
 		if (firstDay != sourceDays[0]) {
 			{
-				
+
 				int dayNumber = firstDay.getValue();
 				for (int i = 0; i < daysOfWeek.length; i++) {
 					int ind = dayNumber <= daysOnWeek ? dayNumber : dayNumber - daysOnWeek;
