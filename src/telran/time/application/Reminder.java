@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 public class Reminder {
 
 	public static void main(String[] args) {
-		int reminderParams[] = new int[0];
+		int reminderParams[];
 		try {
 			reminderParams = setReminderParams(args);
 			playBeeps(reminderParams[0], reminderParams[1]);
