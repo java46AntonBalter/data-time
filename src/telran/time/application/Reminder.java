@@ -35,7 +35,7 @@ public class Reminder {
 	private static int getDurationInSeconds(ChronoUnit unit, String duration) throws Exception {
 		int durationInUnits = getIntFromString(duration);
 		if (durationInUnits <= 0) {
-			throw new Exception("Interval value should be a positive number");
+			throw new Exception("Duration value should be a positive number");
 		}
 		return Math.toIntExact(TimeUnit.of(unit).toSeconds(durationInUnits));
 	}
