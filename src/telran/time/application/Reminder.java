@@ -54,7 +54,7 @@ public class Reminder {
 			throw new Exception("value should be an integer number");
 		}
 		
-		return Math.toIntExact(Duration.of(dur, unit). toSeconds());
+		return Math.toIntExact(Duration.of(dur, unit).toSeconds());
 	}
 
 	
