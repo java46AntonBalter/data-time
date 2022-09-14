@@ -1,5 +1,6 @@
 package telran.time.application;
 
+import java.time.Duration;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.concurrent.TimeUnit;
@@ -53,7 +54,7 @@ public class Reminder {
 			throw new Exception("value should be an integer number");
 		}
 		
-		return Math.toIntExact(TimeUnit.of(unit).toSeconds(dur));
+		return Math.toIntExact(Duration.of(dur, unit). toSeconds());
 	}
 
 	
